@@ -29,28 +29,12 @@ import java.util.Scanner;
 					case 2:
 						System.out.println("Enter the Phone Number");
 						String phoneNumber = scanner.next();
-						boolean updated = contact.editContact(phoneNumber);	
-						if(updated)
-						{
-							System.out.println("Contact Updated.");
-						}
-						else
-						{
-							System.out.println("Contact not found");
-						}
-						break;
+						contact.editContact(phoneNumber);	
+						
 					case 3:
 						System.out.println("Enter the Phone Number");
 						String phoneNumberToDel = scanner.next();
-						 boolean status = contact.deleteContact(phoneNumberToDel);
-						 if(status)
-							{
-								System.out.println("Contact Deleted Successfully");
-							}
-							else
-							{
-								System.out.println("Contact not found");
-							}
+						 contact.deleteContact(phoneNumberToDel);
 						 break;
 					case 4:	
 						contact.displayContact();

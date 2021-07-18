@@ -109,7 +109,6 @@ public class AddressBook
 		}
 	}
 
-	
 	private static boolean operationStatus(boolean status) 
 	{
 		if (status)
@@ -143,34 +142,6 @@ public class AddressBook
 		else
 		{
 			System.out.println("Contact already exsist");
-		}
-	}
-
-	public int searchPerson(String searchKey) {
-		int count = 0;
-		for (String bookName : addressBooks.keySet())
-		{
-			LinkedList<Contact> contactList = addressBooks.get(bookName);
-			for (Contact contact : contactList) 
-			{
-				if (contact.getCity().equals(searchKey) || contact.getState().equals(searchKey)) 
-				{
-					System.out.println(contact.getFirstname() + "" + contact.getLastname());
-					count++;
-				}
-			}
-		}
-		return count; 
-	}
-
-	public void viewPerson(String viewKey) {
-		for (String bookName : addressBooks.keySet()) {
-			LinkedList<Contact> contactList = addressBooks.get(bookName);
-			for (Contact contact : contactList) {
-				if (contact.getCity().equals(viewKey) || contact.getState().equals(viewKey)) {
-					System.out.println(contact);
-				}
-			}
 		}
 	}
 }

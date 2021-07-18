@@ -14,12 +14,9 @@ import java.util.Scanner;
 				System.out.println("Please choose from below choices .");
 				System.out.println(" 1 Add Contact ");
 				System.out.println(" 2 Edit Contact ");
-				System.out.println(	" 3 Delete Contact ");
+				System.out.println(" 3 Delete Contact ");
 				System.out.println(" 4 Display Contact ");
-				System.out.println("5 Search ");
-				System.out.println("6 View Person from same state or city");
-				System.out.println("7 No of person from same state or city ");
-				System.out.println("\n 8 Quit ");
+				System.out.println(" 5 Quit ");
 				int userChoice = scanner.nextInt();
 				switch (userChoice) 
 				{
@@ -39,24 +36,8 @@ import java.util.Scanner;
 					case 4:	
 						contact.displayContact();
 						break;
-					case 5:
-						System.out.println("Enter the city or state which to be searched");
-						String searchKey = scanner.next();
-						contact.searchPerson(searchKey);
-						break;
-					case 6:
-						System.out.println("Enter the city or state which to be searched");
-						String viewKey = scanner.next();
-						contact.viewPerson(viewKey);
-						break;
-					case 7:
-						System.out.println("Enter the city or state which to be searched");
-						String searchKeyForCount = scanner.next();
-						int count = (int)contact.searchPerson(searchKeyForCount);
-						System.out.println("Total Contacts are : "+count+ " in "+ searchKeyForCount);
-						break;
 					default:
-						System.out.println("You just Quit");
+						System.out.println(" Quit");
 						System.exit(0);
 				}
 			}
